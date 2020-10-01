@@ -25,9 +25,9 @@ app.use(function errorHandler(error, req, res, next) {
     response = { error: { message: 'server error' } };
   } else {
     console.error(error);
-    response = { error };
+    response = { message: error.message, stack: error.stack };
   }
-  res.status(500).json(response)
+  res.status(500).json(response);
 });
 
 module.exports = app;
