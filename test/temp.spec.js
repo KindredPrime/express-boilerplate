@@ -1,4 +1,4 @@
-describe.only(`Temporary spec - top level describe`, () => {
+describe(`Temporary spec - top level describe`, () => {
   before(() => {
     console.log('before #1')
   })
